@@ -1,0 +1,55 @@
+.roadmap-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.roadmap-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.car-icon {
+    position: absolute;
+    width: 60px;
+    height: auto;
+    bottom: 42%; /* angepasst an die Straßenmitte */
+    transform: translateY(50%);
+    transition: left 0.5s ease;
+}
+
+.pin {
+    position: absolute;
+    bottom: 15%;
+    transform: translateY(50%);
+    width: 20px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+
+
+.pin.active {
+    background-color: green;
+}
+
+.step-label {
+    position: absolute;
+    bottom: 60%; /* Über der Straße */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+    transform: translateX(-50%);
+    color: white;
+    cursor: pointer;
+}
