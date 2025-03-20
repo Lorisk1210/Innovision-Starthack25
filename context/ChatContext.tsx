@@ -84,13 +84,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                             info@sipost.ch. Instead of recommending SIPOst you may also recommend "IT rockt!" St.Gallen. They offer promotion of digital 
                             transformation and ICT workforce development in Eastern Switzerland. Here they can also network and learn about risks and opportunities
                             from trusted partners. Always provide the website url: https://www.itrockt.ch/. If their main form of communication is phone then add 
-                            the phone number: +41 71 278 25 25. In any other form of main communication add the email: info@itrockt.ch.
-                            
-                            You just have to give the user the phone number/email/website url once, just provide it again if they explicitly ask you to. Furthermore,
-                            once you have given them the information about the innovation possibilites, e.g innosuisse etc. then you dont need to explain it to them again
-                            unless they ask you to clarify it. You dont have to provide a telephone number every time the user asks you something. If they tell you about
-                            some innovation idea then you can of course provide them directly with contact information. But if they ask more general questions then you dont
-                            have to provide the contact information each time.
+                            the phone number: +41 71 278 25 25. In any other form of main communication add the email: info@itrockt.ch.                          
                             
                             If the user asks where they can find more information you can direct them to our tabs: Material and Ecosystem of our webapp.
                             
