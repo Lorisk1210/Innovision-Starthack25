@@ -45,18 +45,18 @@ export default function Dashboard() {
 
 
 
-                        {/* SWOT*/}
-                        <Link href="/swot">
+                        {/* Business*/}
+                        <Link href="/business">
                             <div className="dashboard-card cursor-pointer">
                                 <div className="card-content">
                                     <div className="icon-wrapper bg-purple-50">
                                         <Briefcase className="h-8 w-8 text-purple-600"/>
                                     </div>
 
-                                    <h2 className="card-title">SWOT-Analysis</h2>
-                                    <p className="card-description">Analyze your opportunity by figuring out strengths, weaknesses, opportunities & threats. </p>
+                                    <h2 className="card-title">Business-Tools</h2>
+                                    <p className="card-description">Analyze your opportunity with business tools</p>
                                     <button className="card-button bg-purple-50 text-purple-700 hover:bg-purple-100">
-                                        Access Tool
+                                        Access Tools
                                     </button>
                                 </div>
                             </div>
