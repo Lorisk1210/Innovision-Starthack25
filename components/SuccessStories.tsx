@@ -1,7 +1,26 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Search, Filter, ArrowUpRight, Rocket, Lightbulb, Zap, Star, Trophy, Cpu, BarChart3, TrendingUp, Users, ShoppingBag, Droplet, HeartPulse, Leaf } from 'lucide-react';
+import {
+    Search,
+    Filter,
+    ArrowUpRight,
+    Rocket,
+    Lightbulb,
+    Zap,
+    Star,
+    Trophy,
+    Cpu,
+    BarChart3,
+    TrendingUp,
+    Users,
+    ShoppingBag,
+    Droplet,
+    HeartPulse,
+    Leaf,
+    Car, Plane, Factory
+} from 'lucide-react';
+import {Eater} from "next/dist/compiled/@next/font/dist/google";
 
 const SuccessStories = () => {
     const [activeFilter, setActiveFilter] = useState('all');
@@ -9,100 +28,100 @@ const SuccessStories = () => {
 
     const categories = [
         { id: 'all', name: 'All Stories', count: 8 },
-        { id: 'tech', name: 'Technology', count: 2 },
+        { id: 'tech', name: 'Technology', count: 3 },
         { id: 'sustainability', name: 'Sustainability', count: 2 },
         { id: 'digital', name: 'Digital Solutions', count: 2 },
-        { id: 'health', name: 'Healthcare', count: 2 }
+        { id: 'health', name: 'Healthcare', count: 1 }
     ];
 
     const stories = [
         {
             id: 1,
-            title: "Revolutionizing Local Food Delivery",
-            company: "FreshRoute",
-            content: "FreshRoute, a small startup with just 12 employees, created a farm-to-table delivery app connecting local farmers directly with consumers. Their innovative logistics solution reduced food waste by 40% while increasing farmer profits by 25%, transforming the local food ecosystem.",
+            title: "Siemens: Introduction of the “Siemens Industrial Copilot",
+            company: "Siemens",
+            content: "Siemens, a leading company in factory automation, has developed the “Siemens Industrial Copilot,” a generative AI product that enables the programming of industrial robots in natural language. This innovation significantly improves production efficiency and strengthens Siemens’ position in the global market.",
             type: "digital",
-            tags: ["Food Tech", "Local Business"],
-            icon: <ShoppingBag />,
+            tags: ["Industry 4.0", "Automation"],
+            icon: <Factory />,
             color: "green",
-            link: "#"
+            link: "https://www.welt.de/wirtschaft/plus253848052/Siemens-riesiger-Vorteil-im-Rennen-um-die-Weltspitze-verbirgt-sich-in-einer-kleinen-Box.html"
         },
         {
             id: 2,
-            title: "Water Conservation Technology",
-            company: "AquaSense",
-            content: "AquaSense, a 20-person engineering firm, developed affordable smart water meters for homes and small businesses. Their IoT solution helped customers reduce water consumption by up to 30% through real-time monitoring and leak detection, becoming a game-changer for water conservation.",
-            type: "sustainability",
-            tags: ["CleanTech", "IoT"],
-            icon: <Droplet />,
+            title: "Airbus: Modernization of Production with the A321XLR",
+            company: "Airbus",
+            content: "Airbus has modernized its production processes in Hamburg-Finkenwerder with the introduction of the long-haul aircraft A321XLR. Through precise and automated logistics as well as the use of specialized robotics, assembly processes have been digitalized, increasing efficiency. These measures allow Airbus to respond more flexibly to market demands and reduce production costs.",
+            type: "tech",
+            tags: ["Aerospace", "Manufacturing"],
+            icon: <Plane />,
             color: "blue",
-            link: "#"
+            link: "https://www.welt.de/regionales/hamburg/article253946928/Luftfahrt-Die-neue-Logik-des-Fliegens.html"
         },
         {
             id: 3,
-            title: "Manufacturing Process Innovation",
-            company: "SmartFactory Systems",
-            content: "SmartFactory Systems, a 35-employee manufacturing technology company, created an affordable retrofit solution that brings Industry 4.0 capabilities to older machinery. Their system helped small manufacturers increase productivity by 22% while reducing defects by 15%.",
-            type: "tech",
-            tags: ["Industry 4.0", "Manufacturing"],
-            icon: <Zap />,
+            title: "Bosch and Continental: Integration of Voice AI in Vehicles",
+            company: "Bosch",
+            content: "Automotive suppliers Bosch and Continental have integrated voice AI technologies, such as ChatGPT, into vehicles. This development enhances human-machine interaction and provides drivers with new features that improve comfort and safety. By adopting these technologies early, both companies strengthen their competitive position in the automotive industry.",
+            type: "digital",
+            tags: ["Automotive", "Voice AI"],
+            icon: <Car />,
             color: "amber",
-            link: "#"
+            link: "https://www.welt.de/wirtschaft/webwelt/plus253972592/Bosch-und-Conti-zeigen-wie-die-neue-Aera-in-der-Autoindustrie-begonnen-hat.html"
         },
         {
             id: 4,
-            title: "Telemedicine for Underserved Areas",
-            company: "RuralHealth Connect",
-            content: "RuralHealth Connect, a 15-person healthcare startup, developed a low-bandwidth telemedicine platform specifically designed for rural areas with poor internet connectivity. Their solution brought specialized healthcare to over 50,000 patients in remote regions who previously had limited access.",
-            type: "health",
-            tags: ["Telemedicine", "Rural Healthcare"],
-            icon: <HeartPulse />,
-            color: "red",
-            link: "#"
+            title: "LEROSH: Robots for the Craft Sector",
+            company: "LEROSH",
+            content: "The LEROSH project (“Learning Robotic Grinding Technology for the Craft Sector”) is developing a robotic arm capable of performing grinding and polishing tasks. This innovation addresses the skilled labor shortage in the craft sector by automating repetitive tasks, allowing professionals to focus on more complex work. With its easy teachability and no need for programming knowledge, the technology is accessible to smaller businesses.",
+            type: "tech",
+            tags: ["Craftsmanship", "Robotics"],
+            icon: <Factory />,
+            color: "blue",
+            link: "https://www.bild.de/leben-wissen/digital/ki-in-der-werkstatt-dieser-roboter-azubi-soll-das-deutsche-handwerk-retten-66b1dd842af40b41bb48f9c2"
         },
         {
             id: 5,
-            title: "AI-Powered Inventory Management",
-            company: "StockSmart",
-            content: "StockSmart, founded by three former retail managers, created an AI inventory management system specifically for small retailers. Their affordable solution reduced inventory costs by 18% while decreasing stockouts by 25%, giving small shops the same advantages as larger retailers.",
-            type: "digital",
-            tags: ["Retail Tech", "Artificial Intelligence"],
-            icon: <BarChart3 />,
-            color: "indigo",
-            link: "#"
+            title: "New Roots: Vegan Cheese from Switzerland",
+            company: "New Roots",
+            content: "New Roots, a company based in Bern, Switzerland, produces nut-based vegan cheese and supplies major retailers both domestically and internationally. Their innovative approach to plant-based dairy alternatives has made them a leader in the sustainable food industry.",
+            type: "sustainability",
+            tags: ["Sustainability", "Vegan"],
+            icon: <ShoppingBag/>,
+            color: "green",
+            link: "https://www.handelszeitung.ch/bilanz/top-innovativeunternehmen-2025"
         },
         {
             id: 6,
-            title: "Sustainable Packaging Innovation",
-            company: "GreenWrap",
-            content: "GreenWrap, a 28-employee materials science company, developed biodegradable packaging made from agricultural waste. Their cost-effective sustainable alternative to plastic packaging helped small food producers reduce environmental impact while meeting consumer demand for eco-friendly solutions.",
-            type: "sustainability",
-            tags: ["Circular Economy", "Materials Science"],
-            icon: <Leaf />,
-            color: "green",
-            link: "#"
+            title: "Sonova: AI-Powered Hearing Aids",
+            company: "Sonova",
+            content: "Sonova Group develops advanced hearing aids that use artificial intelligence to enhance speech comprehension. This innovation significantly improves the quality of life for people with hearing loss, setting new standards in the audiology industry.",
+            type: "health",
+            tags: ["Healthcare", "AI"],
+            icon: <HeartPulse />,
+            color: "red",
+            link: "https://www.handelszeitung.ch/bilanz/top-innovativeunternehmen-2025"
         },
         {
             id: 7,
-            title: "Accessible 3D Printing Service",
-            company: "PrintPro Solutions",
-            content: "PrintPro Solutions, a team of just 8 people, created a distributed network of 3D printers with a simple ordering platform. They enabled small businesses to access custom manufacturing without high equipment costs, revolutionizing product development for local entrepreneurs.",
+            title: "ABB: Genix Copilot for Industrial Optimization",
+            company: "ABB",
+            content: "ABB has transformed the industrial landscape with its Genix Copilot, leveraging Azure OpenAI services to enhance operational efficiency. The solution reduces operating and maintenance costs by up to 30% and decreases service requests by 80% through self-service capabilities.",
             type: "tech",
-            tags: ["Additive Manufacturing", "Distributed Production"],
-            icon: <Cpu />,
-            color: "purple",
-            link: "#"
+            tags: ["Industry 4.0", "Automation"],
+            icon: <Zap />,
+            color: "amber",
+            link: "https://news.microsoft.com/de-ch/2024/11/19/schweizer-innovation-im-fokus-ki-transformation-in-aktion/"
         },
         {
             id: 8,
-            title: "Mental Health Platform for SMEs",
-            company: "MindfulWork",
-            content: "MindfulWork, a 16-person healthcare startup, developed an affordable mental wellness platform specifically for small businesses. Their solution helped SMEs reduce employee burnout by 30% and improve retention, bringing enterprise-level wellness benefits to smaller organizations.",
-            type: "health",
-            tags: ["Mental Health", "Employee Wellness"],
-            icon: <Users />,
-            color: "blue",
-            link: "#"
+            title: "CleanTech Swiss AG: Leading in Innovation Rankings",
+            company: "CleanTech Swiss AG",
+            content: "CleanTech Swiss AG has been recognized as one of the most innovative companies in Switzerland, focusing on sustainable technologies that drive environmental protection and energy efficiency.",
+            type: "sustainability",
+            tags: ["Sustainability", "Innovation"],
+            icon: <Leaf />,
+            color: "green",
+            link: "https://www.ct-swiss.ch/cleantech-swiss-ag-top-innov/"
         }
     ];
 
