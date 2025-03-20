@@ -90,7 +90,7 @@ export const resources_clueless = [
         description: "Bi-annual event providing SMEs with information on available innovation funding programs, application procedures, and success stories from previous grant recipients.",
         tags: ["Funding", "Grants", "Innovation Support"],
         type: "events",
-        imageUrl: "/images/inno.jpg",
+        imageUrl: "/images/inno.png",
         number: "+41 58 461 61 61",
     },
 
