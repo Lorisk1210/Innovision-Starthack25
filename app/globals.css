@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@layer base {
+  :root {
+    --background: 150 40% 97%;
+    --foreground: 142 33% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 142 33% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 142 33% 12%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 144 100% 97%;
+    --secondary: 144 30% 96%;
+    --secondary-foreground: 142 33% 12%;
+    --muted: 144 30% 96%;
+    --muted-foreground: 142 15% 45%;
+    --accent: 144 30% 96%;
+    --accent-foreground: 142 33% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 142 20% 90%;
+    --input: 142 20% 90%;
+    --ring: 142 76% 36%;
+    --radius: 1rem;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, hsl(150 40% 97%), hsl(144 30% 96%));
+}
+
+.speech-bubble {
+  position: relative;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  border-left: 20px solid white;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
