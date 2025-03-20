@@ -20,19 +20,21 @@ const RoadmapMap = () => {
 
     return (
         <div className="roadmap-container">
-            <img src="/images/roadmap.png" alt="Roadmap" className="roadmap-image" />
+            <img src="/images/roadmap.png" alt="Roadmap" className="roadmap-image"/>
+            <h1 className="text-3xl font-bold mb-6">Innovation Roadmap</h1>
+            <img src="/images/roadmap.png" alt="Roadmap" className="roadmap-image"/>
             {roadmapStations.map((station) => (
                 <React.Fragment key={station.id}>
                     <div
                         className={`pin ${station.id <= currentStep ? 'active' : ''}`}
-                        style={{ left: `${station.progress}%` }}
+                        style={{left: `${station.progress}%`}}
                         onClick={() => setCurrentStep(station.id)}
                     >
                         {station.id}
                     </div>
                     <div
                         className="step-label"
-                        style={{ left: `${station.progress}%` }}
+                        style={{left: `${station.progress}%`}}
                         onClick={() => setCurrentStep(station.id)}
                     >
                         {station.name}
@@ -44,7 +46,7 @@ const RoadmapMap = () => {
                 src="/images/car.png"
                 alt="Car"
                 className="car-icon"
-                style={{ left: `${currentPosition}%` }}
+                style={{left: `${currentPosition}%`}}
             />
         </div>
     );
