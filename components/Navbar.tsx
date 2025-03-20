@@ -1,10 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Leaf } from "lucide-react";
 
 const Navbar: React.FC = () => {
+    const [dashboardPath, setDashboardPath] = useState("/clueless"); // Default path
+
+    useEffect(() => {
+        // Get user persona and name from localStorage (or replace with API call)
+        const persona = localStorage.getItem("userPersona") || "default";
+        const userName = localStorage.getItem("userName") || "Guest"; // Default name if not found
+
+        // Map persona to different dashboard routes
+        const personaRoutes: Record<string, string> = {
+            clueless: "/clueless",
+            motivated: "/motivated",
+            hesitant: "/hesitant",
+            default: "/clueless", // Fallback path
+        };
+
+        // Construct URL with name as a query parameter
+        const basePath = personaRoutes[persona] || personaRoutes.default;
+        const fullPath = `${basePath}?name=${encodeURIComponent(userName)}`;
+
+        setDashboardPath(fullPath);
+    }, []);
+
     return (
         <nav className="bg-gradient-to-r from-green-800 to-green-700 border-b border-green-600/20">
             <div className="container mx-auto px-4">
@@ -20,7 +42,7 @@ const Navbar: React.FC = () => {
                     {/* Navigation Links */}
                     <div className="hidden md:flex items-center space-x-1">
                         {[
-                            { href: "/clueless", label: "Dashboard" },
+                            { href: dashboardPath, label: "Dashboard" },
                             { href: "/ecosystem", label: "Ecosystem" },
                             { href: "/material", label: "Material" },
                             { href: "/Chat", label: "AI Chat" },

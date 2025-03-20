@@ -99,6 +99,9 @@ export default function Onboarding() {
                     updatedResponses[a as keyof typeof responses] > updatedResponses[b as keyof typeof responses] ? a : b
                 );
 
+                localStorage.setItem("userPersona", `${highestPersona}`); // Options: "clueless", "motivated", "hesitant"
+                localStorage.setItem("userName", `${name}`)
+
                 // Redirect after state update
                 setTimeout(() => {
                     router.push(`/${highestPersona}?name=${name}`);
