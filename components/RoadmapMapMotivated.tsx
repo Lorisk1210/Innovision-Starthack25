@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import '../app/roadmap.css';
-import RoadmapTasks from './RoadmapTasks';
+import RoadmapTasks from './RoadmapTasksMotivated';
 
 
 const roadmapStations = [
@@ -174,10 +174,11 @@ const RoadmapMap = () => {
 // Helper function to get step descriptions
 function getStepDescription(stepId: number): string {
     const descriptions: Record<number, string> = {
-        1: "Identify and define the problem your innovation will solve. This involves research, user interviews, and market analysis to understand pain points and needs.",
-        2: "Generate creative ideas and develop initial concepts. Focus on brainstorming solutions without constraints, then refine them into viable concepts.",
-        3: "Evaluate if your concept is technically, financially, and operationally feasible. Analyze risks, resources required, and potential return on investment.",
-        4: "Create a working model or representation of your solution. This can range from simple mockups to functional prototypes that can be tested with users.",
+
+        1: "Evaluate if your concept is technically, financially, and operationally feasible. Analyze risks, resources required, and potential return on investment.",
+        2: "Create a working model or representation of your solution. This can range from simple mockups to functional prototypes that can be tested with users.",
+        3: "Refine your solution based on feedback and testing. Scale up your innovation to reach a larger audience or market.",
+        4: "Develop a sustainable business model around your innovation. This involves pricing, revenue streams, and go-to-market strategy",
         5: "Develop and deploy your innovation. This involves building the actual solution, preparing for launch, and releasing it to users.",
         6: "Track performance, gather feedback, and continuously improve your innovation based on real-world usage and changing needs."
     };

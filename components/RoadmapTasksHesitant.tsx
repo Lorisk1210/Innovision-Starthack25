@@ -11,6 +11,7 @@ interface Task {
 
 // Tasks data for each roadmap step
 const roadmapTasks: Record<number, Task[]> = {
+
     1: [
         { id: 1, title: 'Identify pain points', description: 'Document key problems that need solving', completed: false },
         { id: 2, title: 'Conduct user interviews', description: 'Gather insights from potential users', completed: false },
@@ -36,12 +37,18 @@ const roadmapTasks: Record<number, Task[]> = {
         { id: 4, title: 'Iterate based on feedback', description: 'Refine the prototype based on user input', completed: false },
     ],
     5: [
+        { id: 1, title: 'Revenue Model Definition', description: 'Identify potential revenue streams and pricing strategies.', completed: false },
+        { id: 2, title: 'Cost Structure Analysis', description: 'Break down operational and production costs to assess profitability.', completed: false },
+        { id: 3, title: 'Value Proposition Mapping', description: 'Clearly define the unique value the solution offers to customers.', completed: false },
+        { id: 4, title: 'Financial Forecasting', description: 'Create financial projections to estimate revenue, expenses, and break-even points.', completed: false },
+    ],
+    6: [
         { id: 1, title: 'Development planning', description: 'Create detailed development roadmap', completed: false },
         { id: 2, title: 'Resource allocation', description: 'Assign team members to specific tasks', completed: false },
         { id: 3, title: 'Implementation execution', description: 'Build the actual solution', completed: false },
         { id: 4, title: 'Deployment strategy', description: 'Plan for release to users', completed: false },
     ],
-    6: [
+    7: [
         { id: 1, title: 'Define success metrics', description: 'Establish KPIs to measure performance', completed: false },
         { id: 2, title: 'Implement tracking systems', description: 'Set up analytics to monitor usage', completed: false },
         { id: 3, title: 'Gather user feedback', description: 'Collect ongoing feedback from users', completed: false },

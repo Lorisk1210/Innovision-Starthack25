@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import RoadmapMap from '../../components/RoadmapMapMotivated';
+import RoadmapMap from '../../components/RoadmapMapHesitant';
 import Navbar from '../../components/Navbar';
 import '/app/roadmap.css';
 

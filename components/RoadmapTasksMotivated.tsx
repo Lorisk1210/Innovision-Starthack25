@@ -11,29 +11,30 @@ interface Task {
 
 // Tasks data for each roadmap step
 const roadmapTasks: Record<number, Task[]> = {
+
     1: [
-        { id: 1, title: 'Identify pain points', description: 'Document key problems that need solving', completed: false },
-        { id: 2, title: 'Conduct user interviews', description: 'Gather insights from potential users', completed: false },
-        { id: 3, title: 'Research market needs', description: 'Analyze existing solutions and market gaps', completed: false },
-        { id: 4, title: 'Define problem statement', description: 'Clearly articulate the problem to be solved', completed: false },
-    ],
-    2: [
-        { id: 1, title: 'Brainstorming session', description: 'Generate ideas without criticism', completed: false },
-        { id: 2, title: 'Concept sketching', description: 'Create visual representations of ideas', completed: false },
-        { id: 3, title: 'Concept validation', description: 'Initial feedback from stakeholders', completed: false },
-        { id: 4, title: 'Define value proposition', description: 'Articulate the unique value of your solution', completed: false },
-    ],
-    3: [
         { id: 1, title: 'Technical feasibility assessment', description: 'Evaluate if the solution can be built', completed: false },
         { id: 2, title: 'Resource requirement analysis', description: 'Identify necessary skills and resources', completed: false },
         { id: 3, title: 'Market feasibility study', description: 'Analyze if there is market demand', completed: false },
         { id: 4, title: 'Cost-benefit analysis', description: 'Calculate potential ROI', completed: false },
     ],
-    4: [
+    2: [
         { id: 1, title: 'Create low-fidelity prototype', description: 'Build a basic version to test core functionality', completed: false },
         { id: 2, title: 'User testing protocol', description: 'Develop a plan to test with users', completed: false },
         { id: 3, title: 'Conduct prototype testing', description: 'Get feedback from users on the prototype', completed: false },
         { id: 4, title: 'Iterate based on feedback', description: 'Refine the prototype based on user input', completed: false },
+    ],
+    3: [
+        { id: 1, title: 'Performance Optimization', description: 'Identify and optimize performance bottlenecks to enhance efficiency.', completed: false },
+        { id: 2, title: 'Feature Enhancement', description: 'Gather user feedback and implement improvements based on impact and usability.', completed: false },
+        { id: 3, title: 'System Scalability Assessment', description: 'Analyze the current infrastructure and plan for scalability improvements.', completed: false },
+        { id: 4, title: 'Team Capacity Building', description: 'Train team members on new technologies and document best practices.', completed: false },
+    ],
+    4: [
+        { id: 1, title: 'Revenue Model Definition', description: 'Identify potential revenue streams and pricing strategies.', completed: false },
+        { id: 2, title: 'Cost Structure Analysis', description: 'Break down operational and production costs to assess profitability.', completed: false },
+        { id: 3, title: 'Value Proposition Mapping', description: 'Clearly define the unique value the solution offers to customers.', completed: false },
+        { id: 4, title: 'Financial Forecasting', description: 'Create financial projections to estimate revenue, expenses, and break-even points.', completed: false },
     ],
     5: [
         { id: 1, title: 'Development planning', description: 'Create detailed development roadmap', completed: false },
