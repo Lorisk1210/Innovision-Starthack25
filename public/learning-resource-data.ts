@@ -1,3 +1,24 @@
+export const categories_clueless = [
+    { id : 'all', name: 'All Resources', count: 11 },
+    { id : 'experts', name: 'Experts', count: 3 },
+    { id : 'events', name: 'Events', count: 4 },
+    { id : 'news', name: 'News', count: 4 },
+];
+
+export const categories_motivated = [
+    { id: 'all', name: 'All Resources', count: 12 },
+    { id: 'research', name: 'Research', count: 4 },
+    { id: 'funding', name: 'Funding', count: 4 },
+    { id: 'events', name: 'Events', count: 4 },
+];
+
+export const categories_hesitant = [
+    { id : 'all', name: 'All Resources', count: 11 },
+    { id : 'experts', name: 'Experts', count: 3 },
+    { id : 'funding', name: 'Funding', count: 4 },
+    { id : 'news', name: 'News', count: 4 },
+];
+
 export const resources_clueless = [
     // EXPERTS
     {
@@ -7,158 +28,113 @@ export const resources_clueless = [
         description: "Expert in SME management and entrepreneurship, specializing in innovation management and financing strategies for small businesses in Switzerland.",
         tags: ["SME Management", "Entrepreneurship", "Innovation"],
         type: "experts",
-        imageUrl: "",
-        number: "kmu@unisg.ch",
+        imageUrl: "/images/dietmar.png",
+        number: "+41 71 224 72 01",
     },
     {
         id: 2,
-        name: "Dr. Martin Artz",
-        institution: "Institute of Technology and Innovation Management (ITEM-HSG)",
-        description: "Specialized in digital transformation for Swiss SMEs, helping businesses adopt new technologies and develop innovation processes suitable for smaller organizations.",
-        tags: ["Digital Transformation", "Technology Adoption", "Process Innovation"],
-        type: "experts",
-        imageUrl: "",
-        number: "item@unisg.ch",
-    },
-    {
-        id: 3,
         name: "Prof. Dr. Thomas Zellweger",
         institution: "Center for Family Business (CFB-HSG)",
         description: "Leading expert on family businesses in Switzerland, focusing on succession planning, governance, and long-term innovation strategies.",
         tags: ["Family Business", "Succession Planning", "Governance"],
         type: "experts",
-        imageUrl: "",
-        number: "cfb@unisg.ch",
+        imageUrl: "/images/thomas.jpeg",
+        number: "+41 71 224 71 00",
     },
     {
-        id: 4,
-        name: "Dr. Ulrich Zehnder",
-        institution: "Chamber of Commerce St.Gallen-Appenzell (IHK)",
-        description: "Advisor for regional SMEs on export strategies and international expansion, with special focus on cross-border opportunities with Germany, Austria, and Liechtenstein.",
-        tags: ["Export", "International Business", "Regional Development"],
-        type: "experts",
-        imageUrl: "",
-        number: "info@ihk.ch",
+        "id": 3,
+        "name": "Prof. Dr. Oliver Gassmann",
+        "institution": "Institute for Technology Management (ITEM-HSG)",
+        "description": "Professor for Technology Management with a focus on Innovation Management, Business Model Innovation, and Strategic Innovation Leadership.",
+        "tags": ["Innovation Management", "Business Model Innovation", "Open Innovation", "Technology Management"],
+        "type": "experts",
+        "imageUrl": "/images/oliver.webp",
+        "number": "+41 71 224 7221"
     },
 
     // EVENTS
     {
-        id: 5,
+        id: 4,
         name: "St. Gallen Innovation Day",
         institution: "Switzerland Innovation Park Ost (SIPOst)",
         description: "Annual event connecting SMEs with innovation experts and researchers, featuring workshops on practical innovation methods and funding opportunities for smaller businesses.",
         tags: ["Networking", "Innovation", "Knowledge Transfer"],
         type: "events",
-        imageUrl: "",
+        imageUrl: "/images/sipost.jpg",
         number: "+41 71 277 20 40",
     },
     {
-        id: 6,
+        id: 5,
         name: "Digital Transformation Workshop Series",
         institution: "\"IT rockt!\" St.Gallen",
         description: "Monthly workshops specifically designed for SMEs looking to implement digital solutions without extensive resources. Includes hands-on training and peer exchange opportunities.",
         tags: ["Digitalization", "Practical Skills", "Peer Learning"],
         type: "events",
-        imageUrl: "",
+        imageUrl: "/images/itrockt.jpg",
         number: "+41 71 278 25 25",
     },
     {
-        id: 7,
+        id: 6,
         name: "Eastern Switzerland Business Forum",
         institution: "Cantonal Trade Association St.Gallen (KGV)",
         description: "Quarterly event bringing together SME owners and managers from Eastern Switzerland to discuss current challenges, regulatory updates, and collaboration opportunities.",
         tags: ["Regional Networking", "SME Management", "Policy Updates"],
         type: "events",
-        imageUrl: "",
+        imageUrl: "/images/cantontrade.jpg",
         number: "+41 71 228 10 40",
     },
     {
-        id: 8,
+        id: 7,
         name: "Innosuisse Funding Information Day",
         institution: "Innosuisse",
         description: "Bi-annual event providing SMEs with information on available innovation funding programs, application procedures, and success stories from previous grant recipients.",
         tags: ["Funding", "Grants", "Innovation Support"],
         type: "events",
-        imageUrl: "",
+        imageUrl: "/images/inno.jpg",
         number: "+41 58 461 61 61",
     },
 
     // NEWS
     {
-        id: 9,
+        id: 8,
         name: "KMU Innovation Monitor",
         institution: "Swiss Institute for Small and Medium-Sized Enterprises (KMU-HSG)",
         description: "Quarterly report analyzing innovation trends and challenges specifically for Swiss SMEs, with practical recommendations and regional benchmarking.",
         tags: ["Market Research", "Innovation Trends", "Benchmarking"],
         type: "news",
-        imageUrl: "",
+        imageUrl: "/images/kmu.webp",
         number: "kmu-hsg@unisg.ch ",
     },
     {
-        id: 10,
+        id: 9,
         name: "Digital SME Newsletter",
         institution: "Eastern Switzerland University of Applied Sciences (OST)",
         description: "Monthly newsletter highlighting digital transformation case studies from local SMEs, featuring practical implementation tips and low-cost technology solutions.",
         tags: ["Digital Transformation", "Case Studies", "Practical Tips"],
         type: "news",
-        imageUrl: "",
+        imageUrl: "/images/ost.jpg",
         number: "info@ost.ch",
     },
     {
-        id: 11,
+        id: 10,
         name: "Circular Economy for SMEs",
         institution: "Circular Economy – Institute of Management & Strategy (IoMS-HSG)",
         description: "Bi-monthly publication showcasing sustainability innovations from regional SMEs, with guides on implementing circular business models on limited resources.",
         tags: ["Sustainability", "Circular Economy", "Business Models"],
         type: "news",
-        imageUrl: "",
+        imageUrl: "/images/ioms.jpg",
         number: "ifb-info@unisg.ch",
     },
     {
-        id: 12,
+        id: 11,
         name: "SwissMEM Industry Report",
         institution: "Swissmem",
         description: "Quarterly analysis of developments in the Swiss mechanical, electrical, and metal industries, with special section dedicated to SME opportunities and challenges.",
         tags: ["Industry Analysis", "Manufacturing", "Engineering"],
         type: "news",
-        imageUrl: "",
+        imageUrl: "/images/swissmem.jpg",
         number: "info@swissmem.ch",
     },
-];
-
-export const categories_clueless = [
-    { id : 'all', name: 'All Resources', count: 0 },
-    { id : 'experts', name: 'Experts', count: 0 },
-    { id : 'events', name: 'Events', count: 0 },
-    { id : 'news', name: 'News', count: 0 },
-];
-
-
-export const categories_motivated = [
-    { id: 'all', name: 'All Resources', count: 16 },
-    { id: 'research', name: 'Research', count: 4 },
-    { id: 'funding', name: 'Funding', count: 4 },
-    { id: 'events', name: 'Events', count: 4 },
-];
-
-export const resources_hesitant = [
-    {
-        id: 1,
-        name: "",
-        institution: "",
-        description: "",
-        tags: [],
-        type: "",
-        imageUrl: "",
-        number: "",
-    },
-];
-
-export const categories_hesitant = [
-    { id : 'all', name: 'All Resources', count: 0 },
-    { id : 'experts', name: 'Experts', count: 0 },
-    { id : 'funding', name: 'Funding', count: 0 },
-    { id : 'news', name: 'News', count: 0 },
 ];
 
 export const resources_motivated = [
@@ -287,4 +263,82 @@ export const resources_motivated = [
         imageUrl: "",
         number: "September 2025",
     },
+];
+
+export const resources_hesitant = [
+    // EXPERTS
+    {
+        id: 1,
+        name: "Prof. Dr. Dietmar Grichnik",
+        institution: "Swiss Institute for Small and Medium-Sized Enterprises (KMU-HSG)",
+        description: "Expert in SME management and entrepreneurship, specializing in innovation management and financing strategies for small businesses in Switzerland.",
+        tags: ["SME Management", "Entrepreneurship", "Innovation"],
+        type: "experts",
+        imageUrl: "/images/dietmar.png",
+        number: "+41 71 224 72 01",
+    },
+    {
+        id: 2,
+        name: "Prof. Dr. Thomas Zellweger",
+        institution: "Center for Family Business (CFB-HSG)",
+        description: "Leading expert on family businesses in Switzerland, focusing on succession planning, governance, and long-term innovation strategies.",
+        tags: ["Family Business", "Succession Planning", "Governance"],
+        type: "experts",
+        imageUrl: "/images/thomas.jpeg",
+        number: "+41 71 224 71 00",
+    },
+    {
+        "id": 3,
+        "name": "Prof. Dr. Oliver Gassmann",
+        "institution": "Institute for Technology Management (ITEM-HSG)",
+        "description": "Professor for Technology Management with a focus on Innovation Management, Business Model Innovation, and Strategic Innovation Leadership.",
+        "tags": ["Innovation Management", "Business Model Innovation", "Open Innovation", "Technology Management"],
+        "type": "experts",
+        "imageUrl": "/images/oliver.webp",
+        "number": "+41 71 224 7221"
+    },
+
+
+    // NEWS
+    {
+        id: 9,
+        name: "KMU Innovation Monitor",
+        institution: "Swiss Institute for Small and Medium-Sized Enterprises (KMU-HSG)",
+        description: "Quarterly report analyzing innovation trends and challenges specifically for Swiss SMEs, with practical recommendations and regional benchmarking.",
+        tags: ["Market Research", "Innovation Trends", "Benchmarking"],
+        type: "news",
+        imageUrl: "/images/kmu.webp",
+        number: "kmu-hsg@unisg.ch ",
+    },
+    {
+        id: 10,
+        name: "Digital SME Newsletter",
+        institution: "Eastern Switzerland University of Applied Sciences (OST)",
+        description: "Monthly newsletter highlighting digital transformation case studies from local SMEs, featuring practical implementation tips and low-cost technology solutions.",
+        tags: ["Digital Transformation", "Case Studies", "Practical Tips"],
+        type: "news",
+        imageUrl: "/images/ost.jpg",
+        number: "info@ost.ch",
+    },
+    {
+        id: 11,
+        name: "Circular Economy for SMEs",
+        institution: "Circular Economy – Institute of Management & Strategy (IoMS-HSG)",
+        description: "Bi-monthly publication showcasing sustainability innovations from regional SMEs, with guides on implementing circular business models on limited resources.",
+        tags: ["Sustainability", "Circular Economy", "Business Models"],
+        type: "news",
+        imageUrl: "/images/ioms.jpg",
+        number: "ifb-info@unisg.ch",
+    },
+    {
+        id: 12,
+        name: "SwissMEM Industry Report",
+        institution: "Swissmem",
+        description: "Quarterly analysis of developments in the Swiss mechanical, electrical, and metal industries, with special section dedicated to SME opportunities and challenges.",
+        tags: ["Industry Analysis", "Manufacturing", "Engineering"],
+        type: "news",
+        imageUrl: "/images/swissmem.jpg",
+        number: "info@swissmem.ch",
+    },
+
 ];
