@@ -22,26 +22,8 @@ export default function Dashboard() {
                     </h1>
                     <p className="text-xl text-gray-600 mb-2">We’re here to help you generate innovative ideas!</p>
 
-                    <div className="dashboard-grid">
-                        {/* SWOT ANALYSIS */}
-                        <Link href="/swot">
-                            <div className="dashboard-card cursor-pointer">
-                                <div className="card-content">
-                                    <div className="icon-wrapper bg-amber-50">
-                                        <Lightbulb className="h-8 w-8 text-amber-600"/>
-                                    </div>
-                                    <div className="stat">
-                                        <span className="stat-number">∞</span>
-                                        <span className="stat-label">Opportunities</span>
-                                    </div>
-                                    <h2 className="card-title">Inspiration</h2>
-                                    <p className="card-description">Get into touch with exciting opportunities</p>
-                                    <button className="card-button bg-amber-50 text-amber-700 hover:bg-amber-100">
-                                        Start Analyzing
-                                    </button>
-                                </div>
-                            </div>
-                        </Link>
+                    <div className="dashboard-grid ">
+
 
                         {/* Learning Resources */}
                         <Link href="/LearningResources">

@@ -23,22 +23,7 @@ export default function Dashboard() {
                     <p className="text-xl text-gray-600 mb-2">We’re here to help you build and validate innovative ideas!</p>
 
                     <div className="dashboard-grid">
-                        {/* Problem finding */}
-                        <Link href="/problemfinding">
-                            <div className="dashboard-card cursor-pointer">
-                                <div className="card-content">
-                                    <div className="icon-wrapper bg-amber-50">
-                                        <Search className="h-8 w-8 text-amber-600"/>
-                                    </div>
 
-                                    <h2 className="card-title">Problem-Finding Tools</h2>
-                                    <p className="card-description">Discover trends, challenges, and customer insights.</p>
-                                    <button className="card-button bg-amber-50 text-amber-700 hover:bg-amber-100">
-                                        Explore Tools
-                                    </button>
-                                </div>
-                            </div>
-                        </Link>
 
                         {/* Validator */}
                         <Link href="/validator">
