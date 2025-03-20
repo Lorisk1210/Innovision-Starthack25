@@ -62,21 +62,6 @@ export default function Business() {
                             </div>
                         </Link>
 
-                        {/* Project Management */}
-                        <Link href="/mgmt">
-                            <div className="dashboard-card cursor-pointer">
-                                <div className="card-content">
-                                    <div className="icon-wrapper bg-green-50">
-                                        <Users className="h-8 w-8 text-green-600"/>
-                                    </div>
-                                    <h2 className="card-title">Project Management</h2>
-                                    <p className="card-description">Organize your innovation project</p>
-                                    <button className="card-button bg-green-50 text-green-700 hover:bg-green-100">
-                                        Find Connections
-                                    </button>
-                                </div>
-                            </div>
-                        </Link>
                     </div>
 
                 </div>
