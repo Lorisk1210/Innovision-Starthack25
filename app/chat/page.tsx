@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import Navbar from '../../components/Navbar';
+import Navbar from '@/components/Navbar'
 import { useChat } from '@/context/ChatContext';
 
 const ChatPage = () => {
@@ -25,7 +25,6 @@ const ChatPage = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <Navbar />
-
             <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div className="bg-white shadow rounded-lg p-6 h-[calc(100vh-200px)] flex flex-col">
                     <div className="flex justify-between items-center mb-6">

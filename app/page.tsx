@@ -26,9 +26,9 @@ const questions = [
     {
         text: "How do you usually network?",
         options: [
-            { answer: "With phone calls.", persona: "clueless", icon: Leaf },
-            { answer: "By Social Media.", persona: "hesitant", icon: Sprout },
-            { answer: "Through industry associations.", persona: "motivated", icon: TreeDeciduous }
+            { answer: "With phone calls.", persona: "clueless", icon: Leaf},
+            { answer: "By Social Media.", persona: "hesitant", icon: Sprout},
+            { answer: "Through industry associations.", persona: "motivated", icon: TreeDeciduous},
         ]
     },
 ];
@@ -46,6 +46,7 @@ export default function Onboarding() {
     const [step, setStep] = useState(-2);
     const [name, setName] = useState("");
     const [workplace, setWorkplace] = useState("");
+    const [communication, setCommunication] = useState("");
     const [responses, setResponses] = useState({ clueless: 0, hesitant: 0, motivated: 0 });
     const [persona, setPersona] = useState<string | null>(null);
     const [description, setDescription] = useState("");
@@ -63,11 +64,19 @@ export default function Onboarding() {
             setPersona(highestPersona);
             setStep((prevStep) => prevStep + 1);
         }
+        console.log(localStorage.getItem("userCommunication"));
     }, [step, responses]);
 
     const startQuestions = () => setStep(-1);
     const handleNameSubmit = () => name.trim() && setStep(0);
     const handleWorkplaceSubmit = () => workplace.trim() && setStep(1);
+    const handleCommunicationSubmit = (index : any) => {
+        const value : string = index === 0 ? "phone" : index === 1 ? "social-media" : "industry";
+        setCommunication(value);
+        console.log("Setting userCommunication to:", value);
+        localStorage.setItem("userCommunication", value);
+        console.log("Stored value:", localStorage.getItem("userCommunication"));
+    }
     const handleFinalSubmission = async () => {
         try {
             const sentiment = await generateSentimentResponse(description);
@@ -192,7 +201,7 @@ export default function Onboarding() {
                                         Continue
                                     </button>
                                 </div>
-                            ) : step <= questions.length ? (
+                            ) : step < questions.length ? (
                                 <div className="space-y-6">
                                     <h2 className="text-3xl font-semibold text-green-800">
                                         {questions[step - 1].text}
@@ -204,6 +213,33 @@ export default function Onboarding() {
                                                 <button
                                                     key={index}
                                                     onClick={() => handleAnswer(option.persona)}
+                                                    className="w-full bg-green-50 border-2 border-green-200 text-green-800 text-xl font-semibold py-4 px-8 rounded-xl hover:bg-green-100 transition-all flex items-center gap-4"
+                                                >
+                                                    <Icon className="w-6 h-6" />
+                                                    {option.answer}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            ) : step === questions.length ? (
+                                <div className="space-y-6">
+                                    <h2 className="text-3xl font-semibold text-green-800">
+                                        {questions[step - 1].text}
+                                    </h2>
+                                    <div className="space-y-4">
+                                        {questions[step - 1].options.map((option, index) => {
+                                            const Icon = option.icon;
+                                            return (
+                                                <button
+                                                    key={index}
+                                                    onClick={() => {
+                                                            handleAnswer(option.persona);
+                                                            console.log(option.persona);
+                                                            console.log(index);
+                                                            handleCommunicationSubmit(index);
+                                                        }
+                                                    }
                                                     className="w-full bg-green-50 border-2 border-green-200 text-green-800 text-xl font-semibold py-4 px-8 rounded-xl hover:bg-green-100 transition-all flex items-center gap-4"
                                                 >
                                                     <Icon className="w-6 h-6" />

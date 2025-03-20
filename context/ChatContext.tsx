@@ -3,8 +3,9 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { generateChatResponse } from '@/services/geminiService';
 
-// MIGHT USE LATER
-// import { useOnboarding } from './OnboardingContext';
+const persona = localStorage.getItem("userPersona") || "default";
+const userName = localStorage.getItem("userName") || "Guest"; // Default name if not found
+const userCommunication = localStorage.getItem("userCommunication") || "default";
 
 type Message = {
     sender: 'user' | 'bot';
@@ -22,12 +23,24 @@ const ChatContext = createContext<ChatContextType | null>(null);
 
 export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [messages, setMessages] = useState<Message[]>([
-        { sender: 'bot', text: 'Hello! I\'m Olma, your Innovation Coach. How can I help you today?' }
+        { sender: 'bot', text: `Hello! I'm Olma, your Innovation Coach. How can I help you today?` }
     ]);
     const [isLoading, setIsLoading] = useState(false);
+    const [persona, setPersona] = useState("default");
+    const [name, setName] = useState("Guest");
+    const [communication, setCommunication] = useState("default");
 
-    // MIGHT USE LATER
-    // const { userData } = useOnboarding();
+    useEffect(() => {
+        const storedPersona = localStorage.getItem("userPersona") || "default";
+        const storedUserName = localStorage.getItem("userName") || "Guest";
+        const storedUserCommunication = localStorage.getItem("userCommunication") || "default";
+
+        setPersona(storedPersona);
+        setName(storedUserName);
+        setCommunication(storedUserCommunication);
+
+        console.log("User Communication:", storedUserCommunication); // Debugging
+    }, [communication]);
 
     // Send message to Gemini API
     const sendMessage = async (message: string) => {
@@ -42,15 +55,22 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             const systemPrompt = `You are Olma, an Innovation Coach AI assistant. You're helping a user who:
                             - is a manager of a SME
                             - lives in the Kanton St. Gallen
+                            - he is ${persona} about innovation
+                            - his main form of communication is ${userCommunication}
 
                             Your goal is to provide practical, actionable innovation advice tailored to their specific context.
                             Be encouraging, specific, and focus on helping them implement innovative ideas in their work.
 
-                            Don't try to generate words in bold (dont use ** text **).
-                            Don't try to generate words in italics (dont use * text *).
-
+                            Never use '*' in your responses.
+                            Answer short and precise unless asked differently by the user.
+                            
+                            If the person is clueless about innovation, provide them with useful information about innovation in St. Gallen.
+                            For example you can give them information about the University of St. Gallen especially the Swiss Institute for Small and
+                            Medium-Sized Enterprises (KMU-HSG). Also directly provide                        
 
                             User's question: ${message}`;
+
+
 
             // For Gemini API, we need to ensure the first message is from a user
             // We'll only include the current user message for simplicity
