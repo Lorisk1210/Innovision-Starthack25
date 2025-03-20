@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
                             { href: dashboardPath, label: "Dashboard" },
                             { href: "/ecosystem", label: "Ecosystem" },
                             { href: "/LearningResources", label: "Material" },
-                            { href: "/Chat", label: "AI Chat" },
+                            { href: "/chat", label: "AI Chat" },
                         ].map((link) => (
                             <Link
                                 key={link.href}
