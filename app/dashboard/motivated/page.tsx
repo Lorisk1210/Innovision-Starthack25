@@ -36,7 +36,7 @@ export default function Dashboard() {
 
             <main className="container mx-auto px-4 py-12">
                 <div className="max-w-7xl mx-auto">
-                    <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 mb-2">
+                    <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 mb-2 pb-2">
                         Hi {userName}
                     </h1>
                     <p className="text-xl text-gray-600 mb-2">We’re here to help you build and validate innovative ideas!</p>

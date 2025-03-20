@@ -146,7 +146,7 @@ export const resources_motivated = [
         description: "Collaborative research program where SMEs can partner with HSG researchers to solve specific innovation challenges. Projects typically last 6-12 months with shared resources.",
         tags: ["Collaborative Research", "Innovation Methods", "Academic Partnership"],
         type: "research",
-        imageUrl: "/images/motivated/pic_1.jpg",
+        imageUrl: "/images/pic_1.jpeg",
         number: "item@unisg.ch",
     },
     {
@@ -156,7 +156,7 @@ export const resources_motivated = [
         description: "SMEs can access state-of-the-art manufacturing technology labs to prototype and test new products or processes with guidance from OST researchers.",
         tags: ["Prototyping", "Industry 4.0", "Manufacturing"],
         type: "research",
-        imageUrl: "/images/motivated/pic_2.jpg",
+        imageUrl: "/images/pic_2.jpeg",
         number: "engineering@ost.ch",
     },
     {
@@ -166,7 +166,7 @@ export const resources_motivated = [
         description: "Specialized materials testing and analysis services for manufacturing SMEs, with expert consulting on material optimization and selection for innovative products.",
         tags: ["Materials Science", "Product Development", "Testing"],
         type: "research",
-        imageUrl: "/images/motivated/pic_3.jpg",
+        imageUrl: "/images/pic_3.jpeg",
         number: "info@rhysearch.ch",
     },
     {
@@ -176,7 +176,7 @@ export const resources_motivated = [
         description: "Research program helping SMEs redesign products and business models following circular economy principles, with implementation support and impact assessment.",
         tags: ["Sustainability", "Circular Economy", "Business Model Innovation"],
         type: "research",
-        imageUrl: "/images/motivated/pic_4.jpg",
+        imageUrl: "/images/pic_4.jpeg",
         number: "info@unisg.ch",
     },
 
@@ -188,7 +188,7 @@ export const resources_motivated = [
         description: "Vouchers worth up to CHF 15,000 for SMEs to conduct preliminary studies and test innovative ideas in collaboration with a research partner, with simplified application process.",
         tags: ["Initial Funding", "Feasibility Study", "Low Barrier"],
         type: "funding",
-        imageUrl: "/images/motivated/pic_5.jpg",
+        imageUrl: "/images/pic_5.jpeg",
         number: "info@innosuisse.ch",
     },
     {
@@ -198,7 +198,7 @@ export const resources_motivated = [
         description: "Co-funding for joint innovation projects between SMEs and research institutions. Innosuisse covers research partner costs while SME contributes own resources and expertise.",
         tags: ["Co-funding", "R&D Partnership", "Product Development"],
         type: "funding",
-        imageUrl: "/images/motivated/pic_5.jpg",
+        imageUrl: "/images/pic_5.jpeg",
         number: "info@innosuisse.ch",
     },
     {
@@ -208,7 +208,7 @@ export const resources_motivated = [
         description: "Tailored support package for SMEs with market-ready innovations, including coaching, international market entry support, and connections to potential investors.",
         tags: ["Market Entry", "Scaling", "International Expansion"],
         type: "funding",
-        imageUrl: "/images/motivated/pic_5.jpg",
+        imageUrl: "/images/pic_5.jpeg",
         number: "info@innosuisse.ch",
     },
     {
@@ -218,7 +218,7 @@ export const resources_motivated = [
         description: "Financial and advisory support for innovation projects that strengthen the regional economy, with focus on SMEs implementing significant technological advancements.",
         tags: ["Regional Development", "Technology Adoption", "Advisory Support"],
         type: "funding",
-        imageUrl: "/images/motivated/pic_8.jpg",
+        imageUrl: "/images/pic_8.jpeg",
         number: "info@wirtschaftsg.ch",
     },
 
@@ -306,7 +306,7 @@ export const resources_hesitant = [
         description: "Vouchers worth up to CHF 15,000 for SMEs to conduct preliminary studies and test innovative ideas in collaboration with a research partner, with simplified application process.",
         tags: ["Initial Funding", "Feasibility Study", "Low Barrier"],
         type: "funding",
-        imageUrl: "",
+        imageUrl: "/images/pic_5.jpeg",
         number: "info@innosuisse.ch",
     },
     {
@@ -316,7 +316,7 @@ export const resources_hesitant = [
         description: "Co-funding for joint innovation projects between SMEs and research institutions. Innosuisse covers research partner costs while SME contributes own resources and expertise.",
         tags: ["Co-funding", "R&D Partnership", "Product Development"],
         type: "funding",
-        imageUrl: "",
+        imageUrl: "/images/pic_5.jpeg",
         number: "info@innosuisse.ch",
     },
     {
@@ -326,7 +326,7 @@ export const resources_hesitant = [
         description: "Tailored support package for SMEs with market-ready innovations, including coaching, international market entry support, and connections to potential investors.",
         tags: ["Market Entry", "Scaling", "International Expansion"],
         type: "funding",
-        imageUrl: "",
+        imageUrl: "/images/pic_5.jpeg",
         number: "info@innosuisse.ch",
     },
     {
@@ -336,7 +336,7 @@ export const resources_hesitant = [
         description: "Financial and advisory support for innovation projects that strengthen the regional economy, with focus on SMEs implementing significant technological advancements.",
         tags: ["Regional Development", "Technology Adoption", "Advisory Support"],
         type: "funding",
-        imageUrl: "",
+        imageUrl: "/images/pic_8.jpeg",
         number: "info@wirtschaftsg.ch",
     },
 
