@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Leaf, Sprout, TreeDeciduous } from "lucide-react";
+import { generateSentimentResponse } from "../services/geminiService";
+import { useRouter } from "next/navigation";
 
 const questions = [
     {
@@ -40,6 +42,7 @@ const progressVariants = {
 };
 
 export default function Onboarding() {
+    const router = useRouter();
     const [step, setStep] = useState(-2);
     const [name, setName] = useState("");
     const [workplace, setWorkplace] = useState("");
@@ -65,10 +68,47 @@ export default function Onboarding() {
     const startQuestions = () => setStep(-1);
     const handleNameSubmit = () => name.trim() && setStep(0);
     const handleWorkplaceSubmit = () => workplace.trim() && setStep(1);
-    const handleFinalSubmission = () => {
-        console.log("Final Persona:", persona);
-        console.log("User Description:", description);
-        // Handle submission logic here
+    const handleFinalSubmission = async () => {
+        try {
+            const sentiment = await generateSentimentResponse(description);
+            console.log("Sentiment response:", sentiment);
+
+            // Map sentiment value to persona
+            const sentimentMap: { [key: string]: keyof typeof responses } = {
+                "1\n": "clueless",
+                "2\n": "motivated",
+                "3\n": "hesitant"
+            };
+
+            const sentimentPersona = sentimentMap[sentiment];
+
+            if (!sentimentPersona) {
+                console.error("Unexpected sentiment response:", sentiment);
+                return;
+            }
+
+            // Update responses and determine the final persona
+            setResponses((prev) => {
+                const updatedResponses = {
+                    ...prev,
+                    [sentimentPersona]: prev[sentimentPersona] + 3, // Add 3 points
+                };
+
+                // Determine the highest-scoring persona
+                const highestPersona = Object.keys(updatedResponses).reduce((a, b) =>
+                    updatedResponses[a as keyof typeof responses] > updatedResponses[b as keyof typeof responses] ? a : b
+                );
+
+                // Redirect after state update
+                setTimeout(() => {
+                    router.push(`/result?persona=${highestPersona}`);
+                }, 100);
+
+                return updatedResponses;
+            });
+        } catch (error) {
+            console.error("Error handling final submission:", error);
+        }
     };
 
     return (
