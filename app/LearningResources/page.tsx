@@ -1,11 +1,33 @@
 "use client";
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Navbar from '../../components/Navbar';
 import {BookOpen, Lightbulb, CheckCircle, GraduationCap} from 'lucide-react';
 import LearningResources from '../../components/LearningResources';
+import {
+    categories_clueless, categories_hesitant,
+    categories_motivated,
+    resources_clueless, resources_hesitant,
+    resources_motivated
+} from "@/public/learning-resource-data";
 
 export default function LearningResourcesPage() {
+    const [persona, setPersona] = useState("default");
+    const [resource, setResource] = useState("0");
+    const [topic, setTopic] = useState("20+");
+    const [success, setSuccess] = useState("unlimited");
+
+    useEffect(() => {
+        const userPersona = localStorage.getItem("userPersona") || "default";
+        setPersona(userPersona);
+
+        if (persona === "clueless") {
+            setResource("11");
+        } else {
+            setResource("12");
+        }
+    }, []);
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
             <Navbar />
@@ -62,18 +84,18 @@ export default function LearningResourcesPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                     <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 text-center">
                         <BookOpen className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                        <div className="text-4xl font-bold text-gray-900 mb-2">24+</div>
+                        <div className="text-4xl font-bold text-gray-900 mb-2">{resource}</div>
                         <div className="text-gray-600">Curated Resources</div>
                     </div>
                     <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 text-center">
                         <Lightbulb className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-                        <div className="text-4xl font-bold text-gray-900 mb-2">12</div>
+                        <div className="text-4xl font-bold text-gray-900 mb-2">{topic}</div>
                         <div className="text-gray-600">Innovation Topics</div>
                     </div>
                     <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 text-center">
                         <GraduationCap className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-                        <div className="text-4xl font-bold text-gray-900 mb-2">3</div>
-                        <div className="text-gray-600">Experience Levels</div>
+                        <div className="text-4xl font-bold text-gray-900 mb-2">{success}</div>
+                        <div className="text-gray-600">Success</div>
                     </div>
                 </div>
 
