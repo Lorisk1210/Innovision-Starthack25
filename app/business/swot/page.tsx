@@ -1,6 +1,6 @@
 
-import Navbar from "../../components/Navbar";
-import Swot from "../../components/Swot";
+import Navbar from "../../../components/Navbar";
+import Swot from "../../../components/Swot";
 
 export default function SwotPage() {
     return (

@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
 
         // Construct URL with name as a query parameter
         const basePath = personaRoutes[persona] || personaRoutes.default;
-        const fullPath = `dashboard/${basePath}`;
+        const fullPath = `/dashboard${basePath}`; // Always reset the base to `/dashboard`
 
         setDashboardPath(fullPath);
     }, []);
