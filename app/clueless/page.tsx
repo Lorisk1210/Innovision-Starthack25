@@ -23,21 +23,21 @@ export default function Dashboard() {
                     <p className="text-xl text-gray-600 mb-2">We’re here to help you generate innovative ideas!</p>
 
                     <div className="dashboard-grid">
-                        {/* Innovation 101 */}
-                        <Link href="/Innovation101">
+                        {/* SWOT ANALYSIS */}
+                        <Link href="/swot">
                             <div className="dashboard-card cursor-pointer">
                                 <div className="card-content">
                                     <div className="icon-wrapper bg-amber-50">
                                         <Lightbulb className="h-8 w-8 text-amber-600"/>
                                     </div>
                                     <div className="stat">
-                                        <span className="stat-number">12</span>
-                                        <span className="stat-label">Core Concepts</span>
+                                        <span className="stat-number">∞</span>
+                                        <span className="stat-label">Opportunities</span>
                                     </div>
-                                    <h2 className="card-title">Innovation 101</h2>
-                                    <p className="card-description">Master the fundamentals of innovation with our curated learning paths.</p>
+                                    <h2 className="card-title">Inspiration</h2>
+                                    <p className="card-description">Get into touch with exciting opportunities</p>
                                     <button className="card-button bg-amber-50 text-amber-700 hover:bg-amber-100">
-                                        Start Learning
+                                        Start Analyzing
                                     </button>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ export default function Dashboard() {
                                         <BookOpen className="h-8 w-8 text-blue-600"/>
                                     </div>
                                     <div className="stat">
-                                        <span className="stat-number">24</span>
+                                        <span className="stat-number">24+</span>
                                         <span className="stat-label">Resources</span>
                                     </div>
                                     <h2 className="card-title">Learning Resources</h2>
@@ -71,7 +71,7 @@ export default function Dashboard() {
                                         <Trophy className="h-8 w-8 text-purple-600"/>
                                     </div>
                                     <div className="stat">
-                                        <span className="stat-number">8</span>
+                                        <span className="stat-number">8+</span>
                                         <span className="stat-label">Stories</span>
                                     </div>
                                     <h2 className="card-title">Success Stories</h2>
