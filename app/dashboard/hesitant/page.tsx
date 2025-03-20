@@ -1,15 +1,19 @@
 "use client";
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import {Search, Brain, Briefcase, Users, ArrowRight, Lightbulb, BookOpen, Trophy, Sparkles} from 'lucide-react';
 import { useSearchParams } from "next/navigation";
-import '../dashboard.css';
-import Navbar from '../../components/Navbar';
+import '../../dashboard.css';
+import Navbar from '../../../components/Navbar';
 
 export default function Dashboard() {
-    const searchParams = useSearchParams();
-    const name = searchParams.get("name");
+    const [userName, setUserName] = useState("");
+
+    useEffect(() => {
+        const storedUserName = localStorage.getItem("userName") || "Guest";
+        setUserName(storedUserName);
+    }, [userName]);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
@@ -18,28 +22,28 @@ export default function Dashboard() {
             <main className="container mx-auto px-4 py-12">
                 <div className="max-w-7xl mx-auto">
                     <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 mb-2">
-                        Hi {name}
+                        Hi {userName}
                     </h1>
-                    <p className="text-xl text-gray-600 mb-2">We’re here to help you build and validate innovative ideas!</p>
+                    <p className="text-xl text-gray-600 mb-2">We’re here to help you support building innovation while carefully assessing risks!</p>
 
                     <div className="dashboard-grid">
-
-
-                        {/* Validator */}
-                        <Link href="/validator">
+                        {/* Success Stories */}
+                        <Link href="/SuccessStories">
                             <div className="dashboard-card cursor-pointer">
                                 <div className="card-content">
-                                    <div className="icon-wrapper bg-blue-50">
-                                        <Brain className="h-8 w-8 text-blue-600"/>
+                                    <div className="icon-wrapper bg-amber-50">
+                                        <Trophy className="h-8 w-8 text-amber-600"/>
                                     </div>
-                                    <h2 className="card-title">Idea Validator</h2>
-                                    <p className="card-description">Assess feasibility and potential with AI.</p>
-                                    <button className="card-button bg-blue-50 text-blue-700 hover:bg-blue-100">
-                                        Validate Idea
+                                    <h2 className="card-title">Success Stories</h2>
+                                    <p className="card-description">Get inspired by real innovation success stories.</p>
+                                    <button className="card-button bg-amber-50 text-amber-700 hover:bg-amber-100">
+                                        Read Stories
                                     </button>
                                 </div>
                             </div>
                         </Link>
+
+
 
                         {/* SWOT*/}
                         <Link href="/swot">

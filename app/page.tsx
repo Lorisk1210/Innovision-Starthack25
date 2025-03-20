@@ -113,7 +113,7 @@ export default function Onboarding() {
 
                 // Redirect after state update
                 setTimeout(() => {
-                    router.push(`/${highestPersona}?name=${name}`);
+                    router.push(`/dashboard/${highestPersona}`);
                 }, 100);
 
                 return updatedResponses;

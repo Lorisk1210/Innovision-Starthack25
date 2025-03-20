@@ -3,10 +3,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { generateChatResponse } from '@/services/geminiService';
 
-const persona = localStorage.getItem("userPersona") || "default";
-const userName = localStorage.getItem("userName") || "Guest"; // Default name if not found
-const userCommunication = localStorage.getItem("userCommunication") || "default";
-
 type Message = {
     sender: 'user' | 'bot';
     text: string;
@@ -56,7 +52,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                             - is a manager of a SME
                             - lives in the Kanton St. Gallen
                             - he is ${persona} about innovation
-                            - his main form of communication is ${userCommunication}
+                            - his main form of communication is ${communication}
 
                             Your goal is to provide practical, actionable innovation advice tailored to their specific context.
                             Be encouraging, specific, and focus on helping them implement innovative ideas in their work.
