@@ -277,7 +277,7 @@ export default function Onboarding() {
                 <div className="w-1/3 flex justify-center items-center">
                     <div className="relative w-full aspect-square rounded-full overflow-hidden shadow-2xl border-8 border-white">
                         <img
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=1000"
+                            src="/images/avatar.png"
                             alt="Avatar"
                             className="w-full h-full object-cover"
                         />
