@@ -39,21 +39,7 @@ export default function Dashboard() {
                             </div>
                         </Link>
 
-                        {/* Validator */}
-                        <Link href="/validator">
-                            <div className="dashboard-card cursor-pointer">
-                                <div className="card-content">
-                                    <div className="icon-wrapper bg-blue-50">
-                                        <Brain className="h-8 w-8 text-blue-600"/>
-                                    </div>
-                                    <h2 className="card-title">Idea Validator</h2>
-                                    <p className="card-description">Assess feasibility and potential with AI.</p>
-                                    <button className="card-button bg-blue-50 text-blue-700 hover:bg-blue-100">
-                                        Validate Idea
-                                    </button>
-                                </div>
-                            </div>
-                        </Link>
+
 
                         {/* SWOT*/}
                         <Link href="/swot">
