@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Leaf } from "lucide-react";
 
 const Navbar: React.FC = () => {
     const [dashboardPath, setDashboardPath] = useState("/clueless"); // Default path
