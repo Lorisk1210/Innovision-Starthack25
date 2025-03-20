@@ -7,4 +7,5 @@ const nextConfig = {
   images: { unoptimized: true },
 };
 
+console.log('Next.js config loaded:', nextConfig);
 module.exports = nextConfig;
