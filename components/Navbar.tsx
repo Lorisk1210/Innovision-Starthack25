@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Leaf } from "lucide-react";
 
 const Navbar: React.FC = () => {
@@ -32,11 +33,32 @@ const Navbar: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo Section */}
-                    <div className="flex items-center space-x-2">
-                        <div className="flex items-center bg-green-600 px-3 py-1.5 rounded-md shadow-lg transform hover:scale-105 transition-transform duration-200">
-                            <Leaf className="w-5 h-5 text-white mr-2" />
-                            <span className="text-white font-bold text-lg">LOGO</span>
-                        </div>
+                    <div className="flex items-center space-x-3">
+                        {/* First logo (image icon) */}
+                        <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
+                            <div className="relative flex items-center">
+                                <Image
+                                    src="/images/Logo-Cleaned.png"
+                                    alt="Innovision Icon"
+                                    width={40}
+                                    height={40}
+                                    className="object-contain"
+                                />
+                            </div>
+                        </Link>
+
+                        {/* Second logo (text) */}
+                        <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
+                            <div className="h-10 w-auto relative flex items-center">
+                                <Image
+                                    src="/images/Innovision-Schrift.png"
+                                    alt="Innovision Logo"
+                                    width={160}
+                                    height={60}
+                                    className="object-contain"
+                                />
+                            </div>
+                        </Link>
                     </div>
 
                     {/* Navigation Links */}
