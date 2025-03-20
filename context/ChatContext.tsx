@@ -88,8 +88,11 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                             
                             You just have to give the user the phone number/email/website url once, just provide it again if they explicitly ask you to. Furthermore,
                             once you have given them the information about the innovation possibilites, e.g innosuisse etc. then you dont need to explain it to them again
-                            unless they ask you to clarify it.
+                            unless they ask you to clarify it. You dont have to provide a telephone number every time the user asks you something. If they tell you about
+                            some innovation idea then you can of course provide them directly with contact information. But if they ask more general questions then you dont
+                            have to provide the contact information each time.
                             
+                            If the user asks where they can find more information you can direct them to our tabs: Material and Ecosystem of our webapp.
                             
 
                             User's question: ${message}`;
