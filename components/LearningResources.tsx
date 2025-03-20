@@ -1,12 +1,23 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { BookOpen, Video, FileText, Globe, Search, Filter, Tag, ArrowUpRight } from 'lucide-react';
+import {
+    resources_clueless, resources_motivated, resources_hesitant,
+    categories_clueless, categories_motivated, categories_hesitant
+} from "@/public/learning-resource-data";
 
 const LearningResources = () => {
     const [activeFilter, setActiveFilter] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
+    const [persona, setPersona] = useState("default");
 
+    useEffect(() => {
+        const userPersona = localStorage.getItem("userPersona") || "default";
+        setPersona(userPersona);
+    }, []);
+
+    /*
     const categories = [
         { id: 'all', name: 'All Resources', count: 24 },
         { id: 'books', name: 'Books', count: 8 },
@@ -148,6 +159,17 @@ const LearningResources = () => {
             link: "#"
         }
     ];
+     */
+
+    const resources =
+        persona === "clueless" ? resources_clueless
+        : persona === "motivated" ? resources_motivated
+        : persona === "hesitant" ? resources_hesitant : [{}];
+
+    const categories =
+        persona === "clueless" ? categories_clueless
+        : persona === "motivated" ? categories_motivated
+        : persona === "hesitant" ? categories_hesitant : [{}];
 
     const filteredResources = resources.filter(resource => {
         const matchesFilter = activeFilter === 'all' || resource.type === activeFilter;
@@ -199,7 +221,7 @@ const LearningResources = () => {
 
     return (
         <div className="max-w-7xl mx-auto">
-            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 mb-4">
+            <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 mb-4 pb-2">
                 Learning Resources
             </h1>
             <p className="text-xl text-gray-600 mb-8">
