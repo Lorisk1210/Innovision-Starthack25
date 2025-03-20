@@ -33,8 +33,6 @@ type Resource = {
     type: string;
     imageUrl: string;
     number: string;
-    link: string;
-    level: string;
 };
 
 type Category = {
