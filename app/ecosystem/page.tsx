@@ -1,8 +1,7 @@
 "use client";
-
 import React from "react";
-import Navbar from '../../components/Navbar'
 import Ecosystem from "@/components/Ecosystem";
+import Navbar from '../../components/Navbar';
 
 const Page: React.FC = () => {
     return (

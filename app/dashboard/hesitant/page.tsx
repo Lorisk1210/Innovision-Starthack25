@@ -90,7 +90,7 @@ export default function Dashboard() {
                                     Discover strategic pathways and unlock your creative potential.
                                 </p>
                             </div>
-                            <Link href="/RoadMap">
+                            <Link href="/RoadMapHesitant">
                                 <button className="roadmap-cta group">
                                     View Roadmap
                                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"/>
