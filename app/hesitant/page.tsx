@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { Book, Shield, Handshake, BarChart, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import {Search, Brain, Briefcase, Users, ArrowRight, Lightbulb, BookOpen, Trophy, Sparkles} from 'lucide-react';
 import { useSearchParams } from "next/navigation";
 import '../dashboard.css';
 import Navbar from '../../components/Navbar';
@@ -19,60 +20,73 @@ export default function Dashboard() {
                     <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 mb-2">
                         Hi {name}
                     </h1>
-                    <p className="text-xl text-gray-600 mb-2">Empowering your innovation journey with tools, mentorship, and insights!</p>
+                    <p className="text-xl text-gray-600 mb-2">We’re here to help you support building innovation while carefully assessing risks!</p>
 
                     <div className="dashboard-grid">
-                        <div className="dashboard-card">
-                            <div className="card-content">
-                                <div className="icon-wrapper bg-yellow-50">
-                                    <Book className="h-8 w-8 text-yellow-600"/>
+                        {/* Success Stories */}
+                        <Link href="/SuccessStories">
+                            <div className="dashboard-card cursor-pointer">
+                                <div className="card-content">
+                                    <div className="icon-wrapper bg-amber-50">
+                                        <Trophy className="h-8 w-8 text-amber-600"/>
+                                    </div>
+                                    <h2 className="card-title">Success Stories</h2>
+                                    <p className="card-description">Get inspired by real innovation success stories.</p>
+                                    <button className="card-button bg-amber-50 text-amber-700 hover:bg-amber-100">
+                                        Read Stories
+                                    </button>
                                 </div>
-                                <h2 className="card-title">Low-Risk Innovation Case Studies</h2>
-                                <p className="card-description">Learn from real-world examples of low-risk innovation to guide your process.</p>
-                                <button className="card-button bg-yellow-50 text-yellow-700 hover:bg-yellow-100">
-                                    Explore Case Studies
-                                </button>
                             </div>
-                        </div>
+                        </Link>
 
-                        <div className="dashboard-card">
-                            <div className="card-content">
-                                <div className="icon-wrapper bg-blue-50">
-                                    <Shield className="h-8 w-8 text-blue-600"/>
+                        {/* Validator */}
+                        <Link href="/validator">
+                            <div className="dashboard-card cursor-pointer">
+                                <div className="card-content">
+                                    <div className="icon-wrapper bg-blue-50">
+                                        <Brain className="h-8 w-8 text-blue-600"/>
+                                    </div>
+                                    <h2 className="card-title">Idea Validator</h2>
+                                    <p className="card-description">Assess feasibility and potential with AI.</p>
+                                    <button className="card-button bg-blue-50 text-blue-700 hover:bg-blue-100">
+                                        Validate Idea
+                                    </button>
                                 </div>
-                                <h2 className="card-title">Safe Test Environment</h2>
-                                <p className="card-description">Experiment with ideas in a controlled, low-risk environment before full-scale launch.</p>
-                                <button className="card-button bg-blue-50 text-blue-700 hover:bg-blue-100">
-                                    Test Your Ideas
-                                </button>
                             </div>
-                        </div>
+                        </Link>
 
-                        <div className="dashboard-card">
-                            <div className="card-content">
-                                <div className="icon-wrapper bg-green-50">
-                                    <Handshake className="h-8 w-8 text-green-600"/>
-                                </div>
-                                <h2 className="card-title">Mentorship Matching</h2>
-                                <p className="card-description">Connect with experienced mentors to guide you through your innovation journey.</p>
-                                <button className="card-button bg-green-50 text-green-700 hover:bg-green-100">
-                                    Find a Mentor
-                                </button>
-                            </div>
-                        </div>
+                        {/* SWOT*/}
+                        <Link href="/swot">
+                            <div className="dashboard-card cursor-pointer">
+                                <div className="card-content">
+                                    <div className="icon-wrapper bg-purple-50">
+                                        <Briefcase className="h-8 w-8 text-purple-600"/>
+                                    </div>
 
-                        <div className="dashboard-card">
-                            <div className="card-content">
-                                <div className="icon-wrapper bg-purple-50">
-                                    <BarChart className="h-8 w-8 text-purple-600"/>
+                                    <h2 className="card-title">SWOT-Analysis</h2>
+                                    <p className="card-description">Analyze your opportunity by figuring out strengths, weaknesses, opportunities & threats. </p>
+                                    <button className="card-button bg-purple-50 text-purple-700 hover:bg-purple-100">
+                                        Access Tool
+                                    </button>
                                 </div>
-                                <h2 className="card-title">Risk Assessment Tool</h2>
-                                <p className="card-description">Evaluate potential risks and discover strategies to minimize them effectively.</p>
-                                <button className="card-button bg-purple-50 text-purple-700 hover:bg-purple-100">
-                                    Assess Risks
-                                </button>
                             </div>
-                        </div>
+                        </Link>
+
+                        {/* Networkig */}
+                        <Link href="/networking">
+                            <div className="dashboard-card cursor-pointer">
+                                <div className="card-content">
+                                    <div className="icon-wrapper bg-green-50">
+                                        <Users className="h-8 w-8 text-green-600"/>
+                                    </div>
+                                    <h2 className="card-title">Networking</h2>
+                                    <p className="card-description">Connect with innovators, mentors and investors.</p>
+                                    <button className="card-button bg-green-50 text-green-700 hover:bg-green-100">
+                                        Find Connections
+                                    </button>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
 
                     <div className="roadmap-section">
@@ -86,10 +100,13 @@ export default function Dashboard() {
                                     Discover strategic pathways and unlock your creative potential.
                                 </p>
                             </div>
-                            <button className="roadmap-cta group">
-                                View Roadmap
-                                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"/>
-                            </button>
+                            <Link href="/RoadMap">
+                                <button className="roadmap-cta group">
+                                    View Roadmap
+                                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"/>
+                                </button>
+                            </Link>
+
                         </div>
                     </div>
                 </div>
