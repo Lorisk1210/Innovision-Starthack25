@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Leaf, Sprout, TreeDeciduous } from "lucide-react";
@@ -34,11 +33,11 @@ const questions = [
 ];
 
 const progressVariants = {
-  initial: { width: "0%" },
-  animate: (step: number) => ({
-    width: `${((step + 2) / (questions.length + 4)) * 100}%`,
-    transition: { duration: 0.5 }
-  })
+    initial: { width: "0%" },
+    animate: (step: number) => ({
+        width: `${((step + 2) / (questions.length + 4)) * 100}%`,
+        transition: { duration: 0.5 }
+    })
 };
 
 export default function Onboarding() {
@@ -135,16 +134,29 @@ export default function Onboarding() {
                 />
             </div>
 
+            {/* Header and Explanation Text Section */}
+            <div className="mb-12 mx-4 flex items-center gap-4 ">
+                {/* Logo and Title */}
+                <img
+                    src="/images/logo_grün.png"
+                    alt="Innovision Logo"
+                    className="w-12 h-12 object-contain" // Adjust size to fit nicely
+                />
+                <h1 className="text-4xl font-bold text-green-800">
+                    Innovision
+                </h1>
+            </div>
+
             <div className="flex flex-row flex-1 max-w-7xl mx-auto gap-8">
                 {/* Left Section (Speech Bubble & Questions) */}
                 <div className="w-2/3 flex flex-col justify-center">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={step}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.4 }}
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: 0}}
+                            exit={{opacity: 0, y: -20}}
+                            transition={{duration: 0.4}}
                             className="speech-bubble p-10 bg-white rounded-3xl shadow-xl text-foreground"
                         >
                             {step === -2 ? (
@@ -164,7 +176,8 @@ export default function Onboarding() {
                                 </div>
                             ) : step === -1 ? (
                                 <div className="space-y-6">
-                                    <h2 className="text-3xl font-semibold text-green-800">Hey! What&#39;s your name?</h2>
+                                    <h2 className="text-3xl font-semibold text-green-800">Hey! What&#39;s your
+                                        name?</h2>
                                     <input
                                         type="text"
                                         value={name}
@@ -214,7 +227,7 @@ export default function Onboarding() {
                                                     onClick={() => handleAnswer(option.persona)}
                                                     className="w-full bg-green-50 border-2 border-green-200 text-green-800 text-xl font-semibold py-4 px-8 rounded-xl hover:bg-green-100 transition-all flex items-center gap-4"
                                                 >
-                                                    <Icon className="w-6 h-6" />
+                                                    <Icon className="w-6 h-6"/>
                                                     {option.answer}
                                                 </button>
                                             );
@@ -233,15 +246,15 @@ export default function Onboarding() {
                                                 <button
                                                     key={index}
                                                     onClick={() => {
-                                                            handleAnswer(option.persona);
-                                                            console.log(option.persona);
-                                                            console.log(index);
-                                                            handleCommunicationSubmit(index);
-                                                        }
+                                                        handleAnswer(option.persona);
+                                                        console.log(option.persona);
+                                                        console.log(index);
+                                                        handleCommunicationSubmit(index);
+                                                    }
                                                     }
                                                     className="w-full bg-green-50 border-2 border-green-200 text-green-800 text-xl font-semibold py-4 px-8 rounded-xl hover:bg-green-100 transition-all flex items-center gap-4"
                                                 >
-                                                    <Icon className="w-6 h-6" />
+                                                    <Icon className="w-6 h-6"/>
                                                     {option.answer}
                                                 </button>
                                             );
@@ -283,5 +296,7 @@ export default function Onboarding() {
 
             </div>
         </div>
+
+
     );
 }
