@@ -1,5 +1,5 @@
-import Navbar from "../../../components/Navbar";
-import News from "../../../components/News";
+import Navbar from "../../components/Navbar";
+import News from "../../components/News";
 
 export default function NewsPage() {
     return (
