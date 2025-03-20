@@ -34,31 +34,27 @@ const Navbar: React.FC = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-3">
-                        {/* First logo (image icon) */}
-                        <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
-                            <div className="relative flex items-center">
-                                <Image
-                                    src="/images/Logo-Cleaned.png"
-                                    alt="Innovision Icon"
-                                    width={40}
-                                    height={40}
-                                    className="object-contain"
-                                />
-                            </div>
-                        </Link>
+                        {/* First logo (image icon) - no link */}
+                        <div className="relative flex items-center">
+                            <Image
+                                src="/images/Logo-Cleaned.png"
+                                alt="Innovision Icon"
+                                width={40}
+                                height={40}
+                                className="object-contain"
+                            />
+                        </div>
 
-                        {/* Second logo (text) */}
-                        <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
-                            <div className="h-10 w-auto relative flex items-center">
-                                <Image
-                                    src="/images/Innovision-Schrift.png"
-                                    alt="Innovision Logo"
-                                    width={160}
-                                    height={60}
-                                    className="object-contain"
-                                />
-                            </div>
-                        </Link>
+                        {/* Second logo (text) - no link */}
+                        <div className="h-10 w-auto relative flex items-center">
+                            <Image
+                                src="/images/Innovision-Schrift.png"
+                                alt="Innovision Logo"
+                                width={160}
+                                height={60}
+                                className="object-contain"
+                            />
+                        </div>
                     </div>
 
                     {/* Navigation Links */}
