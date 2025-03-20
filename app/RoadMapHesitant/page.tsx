@@ -4,7 +4,7 @@ import RoadmapMap from '../../components/RoadmapMapMotivated';
 import Navbar from '../../components/Navbar';
 import '/app/roadmap.css';
 
-const RoadmapPage = () => {
+const RoadmapHesitantPage = () => {
     return (
         <div className="roadmap-page bg-gray-50 min-h-screen pb-12">
             <Navbar />
@@ -15,4 +15,4 @@ const RoadmapPage = () => {
     );
 };
 
-export default RoadmapPage;
+export default RoadmapHesitantPage;
