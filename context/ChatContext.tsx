@@ -34,8 +34,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setPersona(storedPersona);
         setName(storedUserName);
         setCommunication(storedUserCommunication);
-
-        console.log("User Communication:", storedUserCommunication); // Debugging
+        
     }, [communication]);
 
     // Send message to Gemini API

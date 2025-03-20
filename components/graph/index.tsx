@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {
     ReactFlow,
     addEdge,
@@ -8,16 +8,12 @@ import {
     useNodesState,
     useEdgesState,
 } from '@xyflow/react';
-
 import '@xyflow/react/dist/style.css';
-
 
 import {
     nodes as initialNodes,
     edges as initialEdges,
 } from './initial-elements';
-
-const nodeClassName = (node: any) => node.type;
 
 const OverviewFlow = () => {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
@@ -38,7 +34,6 @@ const OverviewFlow = () => {
             attributionPosition="top-right"
             style={{ backgroundColor: "#F7F9FB" }}
         >
-            <MiniMap zoomable pannable nodeClassName={nodeClassName} />
             <Controls />
             <Background  />
         </ReactFlow>

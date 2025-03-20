@@ -10,7 +10,7 @@ const IdeaGenerator: React.FC = () => {
                 Get inspired and generate new innovative ideas. This section will help
                 you brainstorm and develop creative solutions.
             </p>
-            <div className="w-full h-[80vh] flex justify-center items-center">
+            <div className="w-full h-[70vh] flex justify-center items-center mt-6">
                 <OverviewFlow/>
             </div>
         </div>
