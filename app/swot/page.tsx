@@ -1,12 +1,13 @@
-import Innovation101 from "../../components/Innovation101";
-import Navbar from "../../components/Navbar";
 
-export default function Innovation101Page() {
+import Navbar from "../../components/Navbar";
+import Swot from "../../components/Swot";
+
+export default function SwotPage() {
     return (
-        <div>
+        <div className="min-h-screen bg-gray-50">
             <Navbar />
             <div className="container mx-auto p-6">
-                <Innovation101 />
+                <Swot />
             </div>
         </div>
     );

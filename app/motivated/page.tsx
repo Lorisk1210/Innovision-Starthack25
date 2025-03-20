@@ -54,9 +54,9 @@ export default function Dashboard() {
                                     <Briefcase className="h-8 w-8 text-green-600"/>
                                 </div>
                                 <h2 className="card-title">Startup Tools</h2>
-                                <p className="card-description">Use frameworks like Business Model Canvas & Lean Canvas to refine your startup.</p>
+                                <p className="card-description">Define your opportunity by making a SWOT-Analysis</p>
                                 <button className="card-button bg-green-50 text-green-700 hover:bg-green-100">
-                                    Access Tools
+                                    Access SWOT-Tool
                                 </button>
                             </div>
                         </div>
