@@ -209,3 +209,82 @@
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
 }
+
+
+
+
+
+
+/* Emergency fix for navigation blocking issues */
+body.has-roadmap {
+    overflow: visible !important; /* Prevent body overflow issues */
+}
+
+/* Ensure modal doesn't block clicks */
+.modal-backdrop,
+.completion-modal,
+.completion-modal-backdrop,
+[class*="modal"] {
+    pointer-events: none !important;
+}
+
+/* Only modal content can receive clicks */
+.modal-backdrop > div,
+.completion-modal > div,
+.completion-modal-backdrop > div,
+[class*="modal"] > div {
+    pointer-events: auto;
+}
+
+/* Ensure confetti never blocks clicks */
+.confetti,
+[class*="confetti"] {
+    position: absolute;
+    pointer-events: none !important;
+    z-index: 5 !important;
+}
+
+/* Priority override for navbar */
+nav,
+nav > div,
+nav a,
+nav div[role="button"],
+nav .flex,
+nav * {
+    position: relative !important;
+    z-index: 9999 !important; /* Maximum z-index */
+    pointer-events: auto !important; /* Always accept events */
+}
+
+/* Reset any animations on navigation elements */
+nav *,
+nav *::before,
+nav *::after {
+    animation: none !important;
+    transition: color 0.2s, background-color 0.2s !important;
+}
+
+/* Additional fixes for persistence issues */
+.roadmap-container {
+    position: relative;
+    isolation: isolate; /* Create a stacking context */
+}
+
+/* Target any scaled element - often used in celebrations */
+.scale-animation,
+[class*="animation"],
+[class*="animate"] {
+    z-index: 10 !important; /* Lower than navbar */
+    pointer-events: none !important; /* Don't capture clicks */
+}
+
+/* Create click-through overlay */
+.click-through-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5000; /* Higher than most things but lower than navbar */
+    pointer-events: none !important;
+}
