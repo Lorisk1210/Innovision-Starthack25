@@ -6,14 +6,29 @@ import {Search, Brain, Briefcase, Users, ArrowRight, Lightbulb, BookOpen, Trophy
 import { useSearchParams } from "next/navigation";
 import '../../dashboard.css';
 import Navbar from '../../../components/Navbar';
+import { useTour } from "@reactour/tour"
 
 export default function Dashboard() {
     const [userName, setUserName] = useState("");
+    const { isOpen, setIsOpen, currentStep } = useTour();
 
     useEffect(() => {
         const storedUserName = localStorage.getItem("userName") || "Guest";
         setUserName(storedUserName);
+
+        const hasSeenTour = localStorage.getItem("hasSeenTour");
+        if (!hasSeenTour || hasSeenTour === "0") {
+            setIsOpen(true);
+        }
     }, [userName]);
+
+    useEffect(() => {
+        // Mark the tour as completed when the last step is reached
+        const totalSteps = 4; // Adjust if you have more/less steps
+        if (currentStep === totalSteps - 1) {
+            localStorage.setItem("hasSeenTour", "true");
+        }
+    }, [currentStep]);
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-white to-gray-50">
@@ -29,6 +44,9 @@ export default function Dashboard() {
                     <div className="dashboard-grid">
                         {/* Success Stories */}
                         <Link href="/SuccessStories">
+
+                            <div id="success-stories" className="dashboard-card cursor-pointer"> {/* Added ID for tour */}
+
                             <div className="dashboard-card cursor-pointer">
                                 <div className="card-content">
                                     <div className="icon-wrapper bg-amber-50">
@@ -41,12 +59,16 @@ export default function Dashboard() {
                                     </button>
                                 </div>
                             </div>
+                            </div>
                         </Link>
 
 
 
                         {/* Business*/}
                         <Link href="/business">
+
+                            <div id="business" className="dashboard-card cursor-pointer"> {/* Added ID for tour */}
+
                             <div className="dashboard-card cursor-pointer">
                                 <div className="card-content">
                                     <div className="icon-wrapper bg-purple-50">
@@ -60,10 +82,14 @@ export default function Dashboard() {
                                     </button>
                                 </div>
                             </div>
+                            </div>
                         </Link>
 
                         {/* Networkig */}
                         <Link href="/ecosystem">
+
+                            <div id="ecosystem" className="dashboard-card cursor-pointer"> {/* Added ID for tour */}
+
                             <div className="dashboard-card cursor-pointer">
                                 <div className="card-content">
                                     <div className="icon-wrapper bg-green-50">
@@ -76,9 +102,12 @@ export default function Dashboard() {
                                     </button>
                                 </div>
                             </div>
+                            </div>
                         </Link>
                     </div>
 
+
+                    <div id="roadmap-section" className="roadmap-section"> {/* Added ID for tour */}
                     <div className="roadmap-section">
                         <div className="roadmap-content">
                             <div className="roadmap-text">
@@ -98,6 +127,7 @@ export default function Dashboard() {
                             </Link>
 
                         </div>
+                    </div>
                     </div>
                 </div>
             </main>
