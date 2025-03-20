@@ -47,13 +47,25 @@ const roadmapTasks: Record<number, Task[]> = {
         { id: 3, title: 'Gather user feedback', description: 'Collect ongoing feedback from users', completed: false },
         { id: 4, title: 'Plan iteration cycles', description: 'Schedule regular updates and improvements', completed: false },
     ],
+    7: [
+        { id: 1, title: 'Define success metrics', description: 'Establish KPIs to measure performance', completed: false },
+        { id: 2, title: 'Implement tracking systems', description: 'Set up analytics to monitor usage', completed: false },
+        { id: 3, title: 'Gather user feedback', description: 'Collect ongoing feedback from users', completed: false },
+        { id: 4, title: 'Plan iteration cycles', description: 'Schedule regular updates and improvements', completed: false },
+    ],
 };
 
 interface RoadmapTasksProps {
     currentStep: number;
+    onStepComplete: (stepId: number) => void;
+    onProgressUpdate?: (stepId: number, progressPercent: number) => void;
 }
 
-const RoadmapTasks: React.FC<RoadmapTasksProps> = ({ currentStep }) => {
+const RoadmapTasks: React.FC<RoadmapTasksProps> = ({
+                                                       currentStep,
+                                                       onStepComplete,
+                                                       onProgressUpdate
+                                                   }) => {
     // State to track completed tasks
     const [tasks, setTasks] = useState<Record<number, Task[]>>(roadmapTasks);
 
@@ -64,10 +76,22 @@ const RoadmapTasks: React.FC<RoadmapTasksProps> = ({ currentStep }) => {
                 task.id === taskId ? { ...task, completed: !task.completed } : task
             );
 
-            return {
+            const newTasks = {
                 ...prevTasks,
                 [currentStep]: updatedStepTasks
             };
+
+            // Check if all tasks are completed
+            const allCompleted = newTasks[currentStep].every(task => task.completed);
+
+            // If all tasks are completed, notify parent component
+            if (allCompleted) {
+                setTimeout(() => {
+                    onStepComplete(currentStep);
+                }, 1000); // Delay to allow user to see the completion
+            }
+
+            return newTasks;
         });
     };
 
@@ -79,6 +103,13 @@ const RoadmapTasks: React.FC<RoadmapTasksProps> = ({ currentStep }) => {
     const completionPercentage = currentTasks.length > 0
         ? Math.round((completedCount / currentTasks.length) * 100)
         : 0;
+
+    // Report progress to parent component when it changes
+    React.useEffect(() => {
+        if (onProgressUpdate) {
+            onProgressUpdate(currentStep, completionPercentage);
+        }
+    }, [completionPercentage, currentStep, onProgressUpdate]);
 
     return (
         <div className="mt-12 bg-white rounded-xl shadow-lg p-6">

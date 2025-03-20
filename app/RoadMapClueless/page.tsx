@@ -1,7 +1,8 @@
 import React from 'react';
 import RoadmapMap from '../../components/RoadMapClueless';
 import Navbar from '../../components/Navbar';
-import '../../roadmapTasks.css';
+// Make sure the path is correct for your project structure
+import '/app/roadmap.css';
 
 const RoadmapPage = () => {
     return (
