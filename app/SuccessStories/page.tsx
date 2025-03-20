@@ -1,5 +1,5 @@
-import SuccessStory from "../../../components/SuccessStories";
-import Navbar from "../../../components/Navbar";
+import SuccessStory from "../../components/SuccessStories";
+import Navbar from "../../components/Navbar";
 
 export default function SuccessStoryPage() {
     return (
