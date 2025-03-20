@@ -59,3 +59,23 @@ export const generateSentimentResponse = async (prompt: string): Promise<string>
         throw error;
     }
 };
+
+export const generateIdeaValidatorResponse = async (prompt: string): Promise<string> => {
+    if (!apiKey) {
+        throw new Error('Gemini API key not set.');
+    }
+
+    try {
+        const genAI = new GoogleGenerativeAI(apiKey);
+        const model = genAI.getGenerativeModel(
+            { model: 'gemini-2.0-flash',
+                systemInstruction: 'You will be getting a prompt from a user using our innovation coach webapp. You will analyze the idea in terms of 1. market research, 2. Feasibility check, 3. risk analysis, 4. Implementation strategy and return a text with the answers. Do not use any markdown to format, but use empty lines with \n to format between the different things. '
+            });
+
+        const result = await model.generateContent(prompt);
+        return result.response.text();
+    } catch (error) {
+        console.error('Error generating sentiment response:', error);
+        throw error;
+    }
+};
