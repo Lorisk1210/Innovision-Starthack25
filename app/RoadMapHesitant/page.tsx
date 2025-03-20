@@ -1,5 +1,5 @@
 import React from 'react';
-import RoadmapMap from '../../components/RoadmapMap';
+import RoadmapMap from '../../components/RoadmapMapHesitant';
 import Navbar from '../../components/Navbar';
 
 const RoadmapPage = () => {

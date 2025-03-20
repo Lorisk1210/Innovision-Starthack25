@@ -44,7 +44,8 @@
 
 .step-label {
     position: absolute;
-    bottom: 60%; /* Über der Straße */
+    bottom: 50%; /* Weiter runter auf die Straße setzen */
+    transform: translateY(50%); /* Vertikal zentrieren */
     font-size: 14px;
     font-weight: bold;
     text-align: center;
