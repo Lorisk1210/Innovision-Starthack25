@@ -64,7 +64,6 @@ export default function Onboarding() {
             setPersona(highestPersona);
             setStep((prevStep) => prevStep + 1);
         }
-        console.log(localStorage.getItem("userCommunication"));
     }, [step, responses]);
 
     const startQuestions = () => setStep(-1);

@@ -58,6 +58,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
                             Never use '*' in your responses.
                             Answer short and precise unless asked differently by the user.
+                            Never tell the user what persona e.g clueless, hesitant, motivated he is.
                             
                             If the person is clueless about innovation, provide them with useful information about innovation in St. Gallen.
                             For example you can give them information about the University of St. Gallen especially the Swiss Institute for Small and
@@ -88,6 +89,8 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                             You just have to give the user the phone number/email/website url once, just provide it again if they explicitly ask you to. Furthermore,
                             once you have given them the information about the innovation possibilites, e.g innosuisse etc. then you dont need to explain it to them again
                             unless they ask you to clarify it.
+                            
+                            
 
                             User's question: ${message}`;
 
