@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
                     <Link className="text-white font-bold px-3 hover:text-blue-400" href={"/News"}>News</Link>
                     <Link className="text-white font-bold px-3 hover:text-blue-400" href={"/SuccessStories"}>Success Stories</Link>
                     <Link className="text-white font-bold px-3 hover:text-blue-400" href={"/CostAnalysis"}>Cost Analysis</Link>
-                    <Link className="text-white font-bold px-3 hover:text-blue-400" href={"/ChatBot"}>AI Chat</Link>
+                    <Link className="text-white font-bold px-3 hover:text-blue-400" href={"/Chat"}>AI Chat</Link>
                 </div>
             </div>
         </nav>

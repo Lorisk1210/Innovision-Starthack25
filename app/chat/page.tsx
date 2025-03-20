@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import Navigation from '../../components/Navigation';
+import Navigation from '../../components/Navbar';
 import { useChat } from '@/context/ChatContext';
 
 const ChatPage = () => {

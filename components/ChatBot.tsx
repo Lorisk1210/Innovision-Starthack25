@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 
-const ChatBotPage: React.FC = () => {
+const ChatPage: React.FC = () => {
     const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
     const [input, setInput] = useState("");
 
@@ -44,4 +44,4 @@ const ChatBotPage: React.FC = () => {
     );
 };
 
-export default ChatBotPage;
+export default ChatPage;
