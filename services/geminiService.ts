@@ -4,9 +4,6 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 // In production, this should be stored in an environment variable
 const apiKey = process.env.NEXT_PUBLIC_GEMINI_KEY || '';
 
-console.log("API Key available:", !!apiKey);
-console.log("API Key length:", apiKey?.length);
-
 export const generateChatResponse = async (
     messages: { role: 'user' | 'model'; content: string }[],
     systemPrompt: string = ''
