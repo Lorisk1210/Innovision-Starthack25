@@ -63,7 +63,7 @@ export default function Dashboard() {
                         </Link>
 
                         {/* Networkig */}
-                        <Link href="/networking">
+                        <Link href="/ecosystem">
                             <div className="dashboard-card cursor-pointer">
                                 <div className="card-content">
                                     <div className="icon-wrapper bg-green-50">
