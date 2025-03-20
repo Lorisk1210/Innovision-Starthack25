@@ -274,15 +274,14 @@ export default function Onboarding() {
                 </div>
 
                 {/* Right Section (Avatar) */}
-                <div className="w-1/3 flex justify-center items-center">
-                    <div className="relative w-full aspect-square rounded-full overflow-hidden shadow-2xl border-8 border-white">
-                        <img
-                            src="/images/avatar.png"
-                            alt="Avatar"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
+                <div className="w-1/2 flex justify-center items-center"> {/* Change w-1/3 to w-1/2 or w-full */}
+                    <img
+                        src="/images/avatar-kreis.png"
+                        alt="Avatar"
+                        className="w-full h-auto object-contain" // Ensure the aspect ratio is maintained and it's a bit bigger
+                    />
                 </div>
+
             </div>
         </div>
     );
