@@ -34,7 +34,7 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         setPersona(storedPersona);
         setName(storedUserName);
         setCommunication(storedUserCommunication);
-        
+
     }, [communication]);
 
     // Send message to Gemini API
@@ -84,6 +84,10 @@ export const ChatProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                             transformation and ICT workforce development in Eastern Switzerland. Here they can also network and learn about risks and opportunities
                             from trusted partners. Always provide the website url: https://www.itrockt.ch/. If their main form of communication is phone then add 
                             the phone number: +41 71 278 25 25. In any other form of main communication add the email: info@itrockt.ch.
+                            
+                            You just have to give the user the phone number/email/website url once, just provide it again if they explicitly ask you to. Furthermore,
+                            once you have given them the information about the innovation possibilites, e.g innosuisse etc. then you dont need to explain it to them again
+                            unless they ask you to clarify it.
 
                             User's question: ${message}`;
 
