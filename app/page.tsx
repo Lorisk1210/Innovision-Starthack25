@@ -102,18 +102,18 @@ export default function Onboarding() {
                                         Hello, I am Olma, your personal guide.
                                     </h1>
                                     <p className="text-xl text-green-700">
-                                        To provide you with the best help, I'll ask you a few questions.
+                                        To provide you with the best help, I&#39;ll ask you a few questions.
                                     </p>
                                     <button
                                         onClick={startQuestions}
                                         className="w-full bg-green-600 text-white text-xl font-semibold py-4 px-8 rounded-xl shadow-md hover:bg-green-700 transition-all"
                                     >
-                                        Let's Begin
+                                        Let&#39;s Begin
                                     </button>
                                 </div>
                             ) : step === -1 ? (
                                 <div className="space-y-6">
-                                    <h2 className="text-3xl font-semibold text-green-800">Hey! What's your name?</h2>
+                                    <h2 className="text-3xl font-semibold text-green-800">Hey! What&#39;s your name?</h2>
                                     <input
                                         type="text"
                                         value={name}
