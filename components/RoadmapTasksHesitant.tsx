@@ -105,12 +105,17 @@ const RoadmapTasks: React.FC<RoadmapTasksProps> = ({
         ? Math.round((completedCount / currentTasks.length) * 100)
         : 0;
 
+    const [lastCompletionPercentage, setLastCompletionPercentage] = useState(0);
     // Report progress to parent component when it changes
     React.useEffect(() => {
-        if (onProgressUpdate) {
-            onProgressUpdate(currentStep, completionPercentage);
+        if (completionPercentage !== lastCompletionPercentage) {
+            setLastCompletionPercentage(completionPercentage);
+            if (onProgressUpdate) {
+                onProgressUpdate(currentStep, completionPercentage);
+            }
         }
-    }, [completionPercentage, currentStep, onProgressUpdate]);
+    }, [completionPercentage, currentStep, onProgressUpdate, lastCompletionPercentage]);
+
 
     return (
         <div className="mt-12 bg-white rounded-xl shadow-lg p-6">
