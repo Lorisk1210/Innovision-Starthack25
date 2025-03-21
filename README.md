@@ -24,15 +24,15 @@ Make sure you have [Node.js](https://nodejs.org/) installed.
 
 1. Clone the repository to your local machine.
 
-2. use npm install and potentially npm install --force if you encounter the first option not working
+2. use ```npm install``` and potentially ```npm install --force``` if you encounter the first option not working
 
 ### Running the project
 
-Use npm run dev to host the project on localhost:3000
+Use ```npm run dev``` to host the project on localhost:3000
 
 ### API Usage
 
-You need to create a .env file with your gemini api key in it to be able to access some of the AI usage
+You need to create a ```.env``` file with your gemini api key in it to be able to access some of the AI usage
 
 
 # START Hack '25
