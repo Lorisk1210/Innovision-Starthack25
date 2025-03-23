@@ -3,7 +3,6 @@
 import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import {Search, Brain, Briefcase, Users, ArrowRight, Lightbulb, BookOpen, Trophy, Sparkles} from 'lucide-react';
-import { useSearchParams } from "next/navigation";
 import '../../dashboard.css';
 import Navbar from '../../../components/Navbar';
 import { useTour } from "@reactour/tour"
